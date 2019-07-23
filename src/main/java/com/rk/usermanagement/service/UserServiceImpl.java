@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.rk.usermanagement.dao.UserDao;
 import com.rk.usermanagement.exception.ResourceDatabaseOperationException;
@@ -15,6 +16,7 @@ import com.rk.usermanagement.exception.ResourceNotFoundException;
 import com.rk.usermanagement.model.User;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
 	@Autowired
